@@ -1,0 +1,35 @@
+Slot machine:
+ - pocetni budzet - beskonacan
+ - na svako povlacenje rucice se vraca "nesto" - realan broj
+
+Svaki bandit (jednoruki pljackas) se definise preko srednje vrednosti koju daje na puno povlacenja i devijacije.
+
+Devijacija (span) - +- vrednost, tolerancija na srednju vrednost.
+
+n bandita (mnogoruki pljackas), na pocetku igre njihov (m, s) nije poznat.
+
+Cilj je da se maksimizuje dobit, donosi se odluka koja rucicu treba povuci, 
+odnosno treba pronaci najprofitnijeg bandita.
+
+Politika odlucivanja 1:
+ 1. ucenje (exploration) - nasumicno biramo masine, povlacimo poteze, racunamo (m, s)
+ 2. koriscenje znanja (explotation) - igramo masinu koja ima najvecu srednju vrednost, a najmanju devijaciju
+
+Ukoliko se faza ucenja ikada zavrsi, necemo detektovati bilo kakve promene
+
+Pohlepna politika (greedy)
+Epsilon pohlepna politika - izbor faze se radi preko random broja 
+Soft max - verovatnoca izbora je proporcionalna samoj vrednosti koju biramo
+
+Filter:
+    alpha = 1-p, p in (0,1)
+    q+ = pq + (1-p)r
+    q+ = q + alpha(r-q)
+
+r - reward
+g+ - next gain
+g - last gain
+q - procenjena vrednost srednje vrednosti bandita
+
+
+

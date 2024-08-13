@@ -1,0 +1,5 @@
+1. Testirati manje epsilon, naci najbolju epsilon greedy politiku
+2. Isporbati nauceno q sa nekim broj iteracija sa epsilon=0, samo greedy politika
+3. Kako promena karakteristika bandita utice na izlaz
+4. Napraviti bandite i okruzenja - izabrati parametre, naci kako se menja q za svakog bandita. 
+    Izlaz treba da bude grafik sa stvarnim m vrednostimai procenjenim q vrendostima za svakog bandita.
